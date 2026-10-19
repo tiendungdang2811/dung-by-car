@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background: #06111f;
+    color: white;
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    background: #0d1b2c;
+    border: 1px solid #26374c;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #aeb9c9;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: #ff641c;
+}
+
+h1 {
+    margin-bottom: 22px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+h1 span {
+    color: #ff641c;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: #aeb9c9;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+label {
+    display: block;
+    margin: 16px 0 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    background: #071321;
+    border: 1px solid #314158;
+    border-radius: 7px;
+    outline: none;
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+input::placeholder {
+    color: #78869a;
+}
+
+input:focus {
+    border-color: #ff641c;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #ff641c;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #e9540c;
+}
+
+.bottom-text {
+    margin-top: 22px;
+    color: #aeb9c9;
+    text-align: center;
+    font-size: 13px;
+}
+
+.bottom-text a {
+    color: #ff641c;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.alert {
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.error {
+    background: #4c2025;
+    color: #ffb8bd;
+}
+
+.success {
+    background: #173d30;
+    color: #a8f0c4;
+}
+
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 25px 20px;
+    }
+}

@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #07111f;
+    color: #eaf1fa;
+    font: 15px Arial, sans-serif
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #030b16;
+    padding: 22px 4%;
+    border-bottom: 1px solid #304057
+}
+
+header b {
+    font-size: 21px
+}
+
+em {
+    font-style: normal;
+    color: #ff792a
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap
+}
+
+a {
+    color: #ff8538;
+    text-decoration: none
+}
+
+nav a {
+    color: #eee
+}
+
+nav a:hover {
+    color: #ff8538
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px
+}
+
+h1 {
+    margin-bottom: 25px
+}
+
+.stat,
+.panel {
+    background: #102137;
+    border: 1px solid #2c4059;
+    border-radius: 13px;
+    padding: 22px;
+    margin: 12px 0
+}
+
+.stat {
+    display: inline-flex;
+    min-width: 190px;
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 10px
+}
+
+.stat span {
+    color: #a5b9ce
+}
+
+.stat strong {
+    font-size: 27px
+}
+
+.panel {
+    overflow-x: auto
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px
+}
+
+td,
+th {
+    text-align: left;
+    padding: 13px 9px;
+    border-bottom: 1px solid #2b4057
+}
+
+th {
+    color: #a6bcd3
+}
+
+small {
+    display: block;
+    color: #a6bcd3;
+    margin-top: 5px
+}
+
+input,
+textarea,
+select {
+    display: block;
+    background: #091827;
+    color: white;
+    border: 1px solid #465a71;
+    border-radius: 7px;
+    padding: 11px;
+    min-width: 170px;
+    margin: 8px 0 16px;
+    font: inherit
+}
+
+textarea {
+    width: min(100%, 600px)
+}
+
+label {
+    display: block
+}
+
+button {
+    border: 0;
+    border-radius: 7px;
+    background: #ff7827;
+    color: #091827;
+    font-weight: bold;
+    padding: 11px 17px;
+    cursor: pointer
+}
+
+button:hover {
+    background: #ff9a59
+}
+
+.danger {
+    background: #a64a50;
+    color: #fff
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 9px
+}
+
+.inline select {
+    margin: 0
+}
+
+.service {
+    padding: 18px;
+    border: 1px solid #3a4e64;
+    border-radius: 9px;
+    margin: 15px 0
+}
+
+.service form+form {
+    margin-top: 12px
+}
+
+.notice {
+    padding: 13px;
+    background: #1c483d;
+    border-radius: 7px
+}
+
+.login {
+    max-width: 430px;
+    margin: 10vh auto;
+    background: #102137;
+    border: 1px solid #304760;
+    border-radius: 14px;
+    padding: 35px
+}
+
+.login input {
+    width: 100%
+}
+
+.login a {
+    display: block;
+    margin-top: 20px
+}
+
+@media(max-width:700px) {
+    header {
+        position: relative
+    }
+
+    .stat {
+        width: 100%
+    }
+
+    main {
+        padding: 0 12px
+    }
+
+    .login {
+        margin: 40px 12px
+    }
+}

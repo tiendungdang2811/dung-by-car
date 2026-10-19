@@ -1,0 +1,1110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #020b16;
+    --bg-soft: #071626;
+    --card: #0d1b2c;
+    --orange: #ff701c;
+    --orange-hover: #e85b0c;
+    --white: #ffffff;
+    --muted: #aab8c9;
+    --border: #243448;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1500px, 92%);
+    margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+
+.site-header {
+    position: relative;
+    z-index: 10;
+    background: #020b16;
+    border-bottom: 1px solid #263347;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    min-height: 105px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex: 0 0 265px;
+    min-width: 0;
+}
+
+.brand-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 2.6vw, 48px);
+    align-self: stretch;
+}
+
+.main-nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: #f1f5f9;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color .2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--orange);
+}
+
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--orange);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    min-width: 0;
+}
+
+.header-outline,
+.header-book {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 49px;
+    padding: 11px 15px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: .2s ease;
+}
+
+.header-outline {
+    border: 1px solid #64748b;
+    background: transparent;
+    color: #fff;
+}
+
+.header-outline:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.orange-outline {
+    border-color: var(--orange);
+    color: #ffae7c;
+}
+
+.header-book {
+    border: 1px solid var(--orange);
+    background: var(--orange);
+    color: #fff;
+}
+
+.header-book:hover {
+    background: var(--orange-hover);
+    border-color: var(--orange-hover);
+}
+
+.welcome-text {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #f1f5f9;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #020b16;
+}
+
+/* Lop anh xe: giu du chieu ngang tren desktop */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url('../images/banner.jpg');
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Lop phu toi ben trai de chu de doc */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 11, 22, .68) 0%,
+        rgba(2, 11, 22, .38) 38%,
+        rgba(2, 11, 22, .04) 75%,
+        rgba(2, 11, 22, 0) 100%
+    );
+    pointer-events: none;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+    padding: 85px 0;
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    max-width: 990px;
+}
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .2px;
+}
+
+.hero-label-icon {
+    font-size: 27px;
+    line-height: 1;
+}
+
+.hero h1 {
+    margin-bottom: 24px;
+    font-size: clamp(36px, 4.1vw, 68px);
+    line-height: 1.28;
+    font-weight: 800;
+    letter-spacing: -1.6px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero-description {
+    max-width: 630px;
+    margin-bottom: 32px;
+    color: #e0e7ef;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-primary,
+.hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 58px;
+    padding: 13px 25px;
+    border-radius: 17px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.hero-primary {
+    border: 1px solid var(--orange);
+    background: var(--orange);
+    color: #fff;
+}
+
+.hero-primary:hover {
+    background: var(--orange-hover);
+}
+
+.hero-secondary {
+    border: 1px solid var(--orange);
+    background: rgba(2, 11, 22, .68);
+    color: #fff;
+}
+
+.hero-secondary:hover {
+    background: rgba(255, 112, 28, .13);
+}
+
+.arrow {
+    margin-left: 8px;
+    font-size: 21px;
+    line-height: 1;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 35px 0;
+    background: #071525;
+    border-top: 1px solid #1c3045;
+    border-bottom: 1px solid #1c3045;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 47px;
+    height: 47px;
+    border-radius: 12px;
+    background: rgba(255, 112, 28, .13);
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.feature-item h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.feature-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-tag {
+    margin-bottom: 14px;
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+.section-heading h2 span,
+.about h2 span {
+    color: var(--orange);
+}
+
+.section-heading > p:last-child {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ================= DICH VU ================= */
+
+.services {
+    padding: 95px 0 105px;
+    background: #06111f;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 23px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #0d1b2c;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--orange);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+}
+
+.service-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 86px;
+    height: 86px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 17px;
+    background: #fff0df;
+}
+
+.service-icon-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-badge {
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: rgba(255, 112, 28, .1);
+    color: #ff9d61;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .6px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.service-description {
+    flex: 1;
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.service-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.service-bottom small {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.price {
+    color: var(--orange);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.service-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #fff0df;
+    transition: transform .2s;
+}
+
+.service-arrow:hover {
+    transform: scale(1.07);
+}
+
+.service-arrow-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ================= GIOI THIEU ================= */
+
+.about {
+    padding: 105px 0;
+    background:
+        radial-gradient(
+            circle at 85% 40%,
+            rgba(255, 112, 28, .07),
+            transparent 38%
+        ),
+        #09192b;
+}
+
+.about-content {
+    max-width: 1500px;
+}
+
+.about h2 {
+    max-width: 700px;
+    margin-bottom: 22px;
+}
+
+.about-description {
+    max-width: 750px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 650px;
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.about-features div {
+    color: #f2f5fa;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 12px 24px;
+    border: 1px solid var(--orange);
+    border-radius: 11px;
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.about-button:hover {
+    background: rgba(255, 112, 28, .12);
+}
+
+/* ================= LIEN HE ================= */
+
+.contact {
+    padding: 85px 0;
+    background: #06111f;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-text {
+    max-width: 780px;
+}
+
+.contact h2 {
+    margin-bottom: 16px;
+}
+
+.contact-text > p:not(.section-tag) {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 27px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #d5dfeb;
+    font-size: 13px;
+}
+
+.contact-icon {
+    width: 39px;
+    height: 39px;
+    object-fit: contain;
+    border-radius: 9px;
+    flex-shrink: 0;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-shrink: 0;
+    min-height: 55px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background: var(--orange);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-button:hover {
+    background: var(--orange-hover);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 65px 0 0;
+    background: #020914;
+    border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 55px;
+    padding-bottom: 50px;
+}
+
+.footer-logo {
+    display: block;
+    width: 230px;
+    margin-bottom: 20px;
+}
+
+.footer-brand p,
+.footer-info p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footer h3 {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-links h3 {
+    margin-bottom: 5px;
+}
+
+.footer-links a,
+.footer-info a {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.footer-links a:hover,
+.footer-info a:hover {
+    color: var(--orange);
+}
+
+.footer-info a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.copyright {
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+    color: #8492a5;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1400px) {
+    .header-inner {
+        gap: 18px;
+    }
+
+    .brand {
+        flex-basis: 215px;
+    }
+
+    .main-nav {
+        gap: 22px;
+    }
+
+    .header-outline,
+    .header-book {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .welcome-text {
+        max-width: 115px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 4.1vw, 58px);
+    }
+}
+
+@media (max-width: 1150px) {
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 14px 0;
+    }
+
+    .brand {
+        flex-basis: 200px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        min-height: 40px;
+        gap: 32px;
+    }
+
+    .main-nav a.active::after {
+        bottom: 0;
+    }
+
+    .header-actions {
+        flex: 1;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hero,
+    .hero-inner {
+        min-height: 590px;
+    }
+
+    .hero::before {
+        background-size: cover;
+        background-position: 58% center;
+    }
+}
+
+@media (max-width: 850px) {
+    .service-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero::after {
+        background: linear-gradient(
+            90deg,
+            rgba(2, 11, 22, .86),
+            rgba(2, 11, 22, .38)
+        );
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+    }
+
+    .header-inner {
+        gap: 15px;
+    }
+
+    .brand {
+        flex: 0 0 185px;
+    }
+
+    .header-actions {
+        width: 100%;
+        flex: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .header-outline,
+    .header-book {
+        min-height: 42px;
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .welcome-text {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .main-nav {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+    .btn-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero,
+    .hero-inner {
+        min-height: 540px;
+    }
+
+    .hero-inner {
+        padding: 65px 0;
+    }
+
+    .hero::before {
+        background-size: cover;
+        background-position: 61% center;
+    }
+
+    .hero::after {
+        background: rgba(2, 11, 22, .7);
+    }
+
+    .hero-label {
+        font-size: 10px;
+        gap: 7px;
+    }
+
+    .hero-label-icon {
+        font-size: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(30px, 8vw, 42px);
+        letter-spacing: -.6px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .hero-primary,
+    .hero-secondary {
+        min-height: 50px;
+        padding: 11px 15px;
+        font-size: 12px;
+    }
+
+    .services,
+    .about,
+    .contact {
+        padding: 65px 0;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 23px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+}
+
+/* ===== CO DINH THANH MENU KHI CUON TRANG ===== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #020b16;
+    border-bottom: 1px solid #263347;
+}
+
+/* Khi bam menu, noi dung khong bi header che */
+html {
+    scroll-padding-top: 125px;
+}
+
+/* Khoang cach khi cuon den tung muc */
+#trang-chu,
+#dich-vu,
+#gioi-thieu,
+#lien-he {
+    scroll-margin-top: 125px;
+}
+
+
+/* ===== MENU: GACH CAM BEN DUOI CHU ===== */
+
+        .main-nav a {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 0;
+            color: #f1f5f9;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 3px;
+            border-radius: 3px;
+            background: #ff701c;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.25s ease;
+        }
+
+        .main-nav a.active,
+        .main-nav a:hover {
+            color: #ff701c;
+        }
+
+        .main-nav a.active::after,
+        .main-nav a:hover::after {
+            bottom: 0;
+            transform: scaleX(1);
+        }
+        /* Liên hệ: giữ cấu trúc và màu sắc hiện tại */
+        .gara-contact-link {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            transition: border-color .2s ease, transform .2s ease;
+        }
+        .gara-contact-link:hover {
+            border-color: #ff701c;
+            transform: translateY(-2px);
+        }
+        .gara-contact-link span {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .gara-contact-link strong { color: inherit; font-weight: 600; }
+        .gara-contact-link small { color: #ff8b45; font-size: 13px; }
+        .gara-contact-link:hover small { text-decoration: underline; }
+    
+/* ===== FOOTER THONG TIN GARA ===== */
+.gara-footer-info { color: #d9e2ec; }
+.gara-footer-info h3 { color: #fff; font-size: 19px; font-weight: 700; margin-bottom: 22px; }
+.gara-info-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; line-height: 1.6; font-size: 15px; }
+.gara-info-icon { display: inline-flex; justify-content: center; align-items: center; flex-shrink: 0; width: 24px; min-width: 24px; height: 24px; color: #ff9a37; }
+.gara-info-icon svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.gara-info-row strong { color: #fff; font-weight: 700; }
+.gara-footer-info .gara-info-row a { display: inline; margin-top: 0; color: #d9e2ec; font-size: inherit; font-weight: inherit; }
+.gara-footer-info .gara-info-row a:hover { color: #ff9a37; text-decoration: underline; }
+.gara-footer-info .gara-footer-description { margin-top: 22px; margin-bottom: 10px; color: #cbd5e1; line-height: 1.7; font-size: 15px; }
+.gara-footer-info .gara-footer-book { display: inline-block; margin-top: 0; color: #ff9a37; font-size: 15px; font-weight: 700; }
+.gara-footer-info .gara-footer-book:hover { color: #ffbd7a; text-decoration: underline; }
+@media (max-width: 768px) { .gara-info-row { font-size: 14px; gap: 10px; } .gara-footer-info h3 { font-size: 18px; } }
+
+
+/* ==========================================
+   DUNG BY CAR - THU GON BANNER TRANG CHU
+   Hien day du 3 muc noi bat khi vao website
+========================================== */
+
+@media (min-width: 1100px) {
+
+    /* Thu nho banner o to */
+    .hero {
+        min-height: 0 !important;
+        height: 520px !important;
+        padding: 0 !important;
+        background-position: center center;
+    }
+
+    /* Can chinh noi dung banner */
+    .hero-inner {
+        min-height: 0 !important;
+        height: 100% !important;
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Giu noi dung gon gang */
+    .hero-content {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Thu gon 3 muc noi bat */
+    .features {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .features-grid {
+        align-items: center;
+    }
+
+    .feature-item {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+}
+#trang-chu,
+#dich-vu,
+#gioi-thieu,
+#lien-he {
+    scroll-margin-top: 120px;
+}
