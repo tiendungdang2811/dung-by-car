@@ -76,13 +76,16 @@ function verify()
 function layout($title)
 {
     // Các mục trên thanh điều hướng
-    $links = [
-        'dashboard.php'          => 'Tổng quan',
-        'quan_ly_lich.php'       => 'Lịch hẹn',
-        'quan_ly_dich_vu.php'    => 'Dịch vụ',
-        'quan_ly_khach_hang.php' => 'Khách hàng',
-        'quan_ly_hoa_don.php'    => 'Hóa đơn'
-    ];
+
+$links = [
+    'dashboard.php'          => 'Tổng quan',
+    'quan_ly_lich.php'       => 'Lịch hẹn',
+    'quan_ly_dich_vu.php'    => 'Dịch vụ',
+    'quan_ly_khach_hang.php' => 'Khách hàng',
+    'quan_ly_hoa_don.php'    => 'Hóa đơn',
+    'doi_mat_khau.php'       => 'Đổi mật khẩu'
+];
+
 
     // Phần đầu HTML
     echo '<!DOCTYPE html>

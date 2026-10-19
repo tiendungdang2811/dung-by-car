@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 19, 2026 lúc 10:16 AM
+-- Thời gian đã tạo: Th10 19, 2026 lúc 11:23 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`ma_admin`, `ho_ten`, `ten_dang_nhap`, `mat_khau`, `ngay_tao`) VALUES
-(1, 'Đặng Tiến Dũng', 'Đặng Tiến Dũng', '$2y$10$QzJGPBEmXUEdxt05jvXTzeZoN1jnZMm9NVVqh8e0c.88H4GrrYCZe', '2026-10-13 16:46:02');
+(1, 'Đặng Tiến Dũng', 'Đặng Tiến Dũng', '$2y$10$l17xbCY1WvyXwS/gT5U3OuAJz/Xdc7..BmJLKxdXr26gbhTC5zHja', '2026-10-13 16:46:02');
 
 -- --------------------------------------------------------
 

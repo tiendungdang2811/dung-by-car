@@ -216,3 +216,95 @@ button:hover {
         margin: 40px 12px
     }
 }
+/* =========================================
+   TRANG ĐỔI MẬT KHẨU ADMIN
+========================================= */
+
+.password-panel {
+    max-width: 620px;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.password-panel h2 {
+    margin-bottom: 12px;
+}
+
+.password-panel > p {
+    margin-bottom: 22px;
+    color: #888;
+    line-height: 1.6;
+}
+
+.password-field {
+    margin-bottom: 20px;
+}
+
+.password-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.password-field input {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #222;
+}
+
+.password-field input:focus {
+    outline: none;
+    border-color: #d4a017;
+}
+
+.password-hint {
+    margin: 5px 0 20px;
+    font-size: 13px;
+    color: #888;
+}
+
+.password-submit {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #d4a017;
+    color: #111;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.password-submit:hover {
+    background: #e5b32b;
+}
+
+.password-error,
+.password-success {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.password-error {
+    background: #fff0f0;
+    color: #b42318;
+    border: 1px solid #f4b4b4;
+}
+
+.password-success {
+    background: #eaf8ee;
+    color: #18743b;
+    border: 1px solid #a7dbb7;
+}
+
+@media (max-width: 600px) {
+    .password-panel {
+        padding: 20px;
+        margin: 12px auto;
+    }
+}
